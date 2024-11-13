@@ -1,0 +1,226 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Universal Serif, sans-serif;
+}
+
+/* Corpo e Cabeçalho */
+body {
+    background-image: url(./ARQUIVOS/IMAGENS/background_index.jpg);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to bottom, rgba(84, 74, 154, 1), rgba(255, 0, 0, 0)),
+                url('./ARQUIVOS/IMAGENS/background_index.jpg');
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #8483B4;
+    border-radius: 5px;
+}
+
+/* Título da Página */
+header h1 {
+    font-size: 2.5em;
+    margin-top: 10px;
+}
+
+/* Main Section */
+main {
+    flex: 1;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Seção 'Sobre' */
+.about img {
+    height: 100px;
+    border-radius: 50%;
+    background-color: #333;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+section.about {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Seção 'Serviços' */
+section.service {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo do catálogo de serviços */
+.service-catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-item img {
+    width: 25%;
+    max-width: 50px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Rodapé */
+footer {
+    background: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(84, 74, 154, 1)),
+                url('./ARQUIVOS/IMAGENS/background_index.jpg');
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade */
+
+/* Ajustes para tablets e desktops pequenos */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    /* Ajuste no layout de navegação */
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Organizar as colunas da seção de serviços em uma coluna */
+    .service-catalog {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ajustes de espaçamento nas seções */
+    .about, .service {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Ajustes para smartphones */
+@media (max-width: 600px) {
+    /* Ajustes no header */
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    /* Ajustes para as seções de texto e títulos */
+    .about h2,
+    .service h2 {
+        font-size: 1.6em;
+    }
+
+    .about p,
+    .service p {
+        font-size: 1em;
+    }
+
+    .service-item {
+        padding: 15px;
+    }
+
+    /* Tamanho do texto nos itens de serviço */
+    .service-item h3 {
+        font-size: 1.1em;
+    }
+    .service-item p {
+        font-size: 0.85em;
+    }
+}

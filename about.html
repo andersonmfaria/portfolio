@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio - Início</title>
+    <link rel="stylesheet" href="stylesabout.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>Sou Webdesigner!</h2>
+            <p>Transformo suas ideias em produtos incríveis!</p>
+        </section>
+        <section class="portfolio">
+            <h2>Este é o meu Portfólio</h2>
+            <div class="grid-container">
+                <img src="../BLOG/ARQUIVOS/IMAGENS/arquivo1.jpg" alt="Imagem 1" class="grid-item" data-index="0" onclick="openLightbox(this)">
+                <img src="../BLOG/ARQUIVOS/IMAGENS/arquivo2.jpg" alt="Imagem 2" class="grid-item" data-index="1" onclick="openLightbox(this)">
+                <img src="../BLOG/ARQUIVOS/IMAGENS/arquivo3.jpg" alt="Imagem 3" class="grid-item" data-index="2" onclick="openLightbox(this)">
+                <img src="../BLOG/ARQUIVOS/IMAGENS/arquivo4.jpg" alt="Imagem 4" class="grid-item" data-index="3" onclick="openLightbox(this)">
+                <img src="../BLOG/ARQUIVOS/IMAGENS/arquivo5.jpg" alt="Imagem 5" class="grid-item" data-index="4" onclick="openLightbox(this)">
+                <img src="../BLOG/ARQUIVOS/IMAGENS/arquivo6.jpg" alt="Imagem 6" class="grid-item" data-index="5" onclick="openLightbox(this)">
+            </div>
+            <!-- Lightbox com botões de navegação -->
+            <div id="lightbox" class="lightbox">
+                <span class="close" onclick="closeLightbox()">&times;</span>
+                <button class="nav-button" id="prev-button" onclick="navigateLightbox(-1)">&#10094;</button>
+                <img id="lightbox-image" src="" alt="Imagem Ampliada">
+                <button class="nav-button" id="next-button" onclick="navigateLightbox(1)">&#10095;</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Anderson Marques Faria. Todos os direitos reservados.</p>
+    </footer>
+    <script src="scriptabout.js"></script>
+</body>
+</html>
